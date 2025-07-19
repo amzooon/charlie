@@ -1,0 +1,229 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+    background-image: url('sfondi/drive1.png');
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    width: 100%;
+    padding: 20px;
+    background: #3498dbca; /*#3498dbae*/
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.285);
+    text-align: center;
+    border-radius: 15px;
+    position: relative;
+}
+
+.container h1 {
+    text-align: center;
+    padding: 10px;
+    background-color: #3498db;
+    color: white;
+    border-radius: 15px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* Spazio tra il testo e l'immagine */
+}
+
+.image-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container .top-left-link, .container .top-right-link {
+    position: absolute;
+    top: 59px;
+    padding: 8px 16px;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 15px;
+    transition: background-color 0.3s;
+    z-index: 1;
+    line-height: 1;
+}
+
+.container .top-left-link {
+    left: 30px;
+    font-size: 30px;
+}
+
+.container .top-right-link {
+    right: 30px;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.container .top-left-link:hover, .container .top-right-link:hover {
+    background-color: #48b6ffc7;
+}
+
+.grid {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Colonne di dimensioni minime di 300px */
+gap: 15px; /* Spazio tra gli elementi */
+padding: 20px;
+border-radius: 15px;
+margin-top: 40px;
+background-color: #00000074;
+}
+
+.grid-item {
+background-color: #00000054;
+border-radius: 10px;
+overflow: hidden;
+position: relative;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.grid-item:hover {
+transform: scale(1.03);
+box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.grid-item img, .grid-item video {
+width: 100%;
+height: auto;
+border-radius: 10px;
+display: block;
+object-fit: cover; /* Mantiene il rapporto delle immagini e video */
+max-height: 400px; /* Limita l'altezza massima */
+}
+
+.grid-item video {
+object-fit: contain; /* Assicura che i video siano visibili interamente */
+}
+
+.download-link {
+position: absolute;
+bottom: 10px; /* Spazio dal fondo del genitore */
+left: 50%; /* Centrato orizzontalmente */
+transform: translate(-50%, 10px) scale(0); /* Centrare e scala iniziale a zero */
+background: linear-gradient(45deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9));
+color: white;
+padding: 8px 12px;
+text-decoration: none;
+opacity: 0; /* Inizialmente invisibile */
+transition: opacity 0.5s ease, transform 0.5s ease;
+border-radius: 4px;
+overflow: hidden; /* Nasconde l'animazione fuori dai bordi */
+z-index: 1; /* Testo sopra il pseudo-elemento */
+}
+
+.grid-item:hover .download-link {
+opacity: 1; /* Rende visibile */
+transform: translate(-50%, -10px) scale(1); /* Espande verso l'esterno */
+}
+
+.download-link::before {
+content: '';
+position: absolute;
+top: 0;
+left: 0;
+width: 0; /* Inizia da zero */
+height: 100%; /* Copre l'altezza del pulsante */
+background: rgba(72, 255, 218, 0.8); /* Colore verde acqua chiaro */
+transition: width 0.5s ease; /* Transizione per l'effetto di riempimento */
+z-index: -1; /* Dietro al testo */
+}
+
+.download-link:hover::before {
+width: 100%; /* Si espande al 100% al passaggio del mouse */
+}
+
+.download-link:hover {
+color: white; /* Mantiene il testo visibile */
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.9);
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    z-index: 2;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 700px){
+    .modal-content {
+        width: 100%;
+    }
+}
+
+.modal-content-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin-top: 5%;
+}
+.grid-item {
+/* Qualsiasi altra regola CSS per il layout degli elementi della griglia */
+position: relative;
+}
+
+hr {
+width: 100%;
+border: 0;
+height: 2px;
+background-color: #000000bb;
+margin: 20px 0;
+grid-column: 1 / -1; /* Assicura che il divisore si estenda per tutta la larghezza della griglia */
+border-radius: 4px;
+
+}
+
+/* Stili per il testo della sezione */
+.section-title {
+color: white;
+font-weight: bold;
+text-align: center;
+margin: 1px 0 50px 0; /* 32px di spazio sopra, 10px sotto */
+font-size: 24px; /* Aumenta la dimensione del font */
+grid-column: 1 / -1; /* Fa sì che l'elemento prenda tutta la larghezza */
+}

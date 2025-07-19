@@ -1,0 +1,514 @@
+document.addEventListener("DOMContentLoaded", function() {
+    var images = [
+        { src: "ico/charlie.png", width: "60px", height: "60px" },
+    ];
+    var randomIndex = Math.floor(Math.random() * images.length);
+    var selectedImage = images[randomIndex];
+    var imageElement = document.getElementById("randomImage");
+    imageElement.src = selectedImage.src;
+    imageElement.style.width = selectedImage.width;
+    imageElement.style.height = selectedImage.height;
+});
+
+const mediaFiles = [
+{ type: 'video', src: 'videos/reel_1.mp4', name: 'video reel_1.mp4' },
+{ type: 'video', src: 'videos/reel_2.mp4', name: 'video reel_2.mp4' },
+{ type: 'video', src: 'videos/reel_3.mp4', name: 'video reel_3.mp4' },
+{ type: 'video', src: 'videos/reel_4.mp4', name: 'video reel_4.mp4' },
+{ type: 'video', src: 'videos/reel_5.mp4', name: 'video reel_5.mp4' },
+{ type: 'video', src: 'videos/reel_6.mp4', name: 'video reel_6.mp4' },
+{ type: 'video', src: 'videos/reel_7.mp4', name: 'video reel_7.mp4' },
+{ type: 'video', src: 'videos/reel_8.mp4', name: 'video reel_8.mp4' },
+{ type: 'video', src: 'videos/reel_9.mp4', name: 'video reel_9.mp4' },
+{ type: 'video', src: 'videos/reel_10.mp4', name: 'video reel_10.mp4' },
+{ type: 'video', src: 'videos/reel_11.mp4', name: 'video reel_11.mp4' },
+{ type: 'video', src: 'videos/reel_12.mp4', name: 'video reel_12.mp4' },
+{ type: 'video', src: 'videos/reel_13.mp4', name: 'video reel_13.mp4' },
+{ type: 'video', src: 'videos/reel_14.mp4', name: 'video reel_14.mp4' },
+{ type: 'video', src: 'videos/reel_15.mp4', name: 'video reel_15.mp4' },
+{ type: 'video', src: 'videos/reel_16.mp4', name: 'video reel_16.mp4' },
+{ type: 'video', src: 'videos/reel_17.mp4', name: 'video reel_17.mp4' },
+{ type: 'video', src: 'videos/reel_18.mp4', name: 'video reel_18.mp4' },
+{ type: 'video', src: 'videos/reel_19.mp4', name: 'video reel_19.mp4' },
+{ type: 'video', src: 'videos/reel_20.mp4', name: 'video reel_20.mp4' },
+{ type: 'video', src: 'videos/reel_21.mp4', name: 'video reel_21.mp4' },
+{ type: 'video', src: 'videos/reel_22.mp4', name: 'video reel_22.mp4' },
+{ type: 'video', src: 'videos/reel_23.mp4', name: 'video reel_23.mp4' },
+{ type: 'video', src: 'videos/reel_24.mp4', name: 'video reel_24.mp4' },
+{ type: 'video', src: 'videos/reel_25.mp4', name: 'video reel_25.mp4' },
+{ type: 'video', src: 'videos/reel_26.mp4', name: 'video reel_26.mp4' },
+{ type: 'video', src: 'videos/reel_27.mp4', name: 'video reel_27.mp4' },
+{ type: 'video', src: 'videos/reel_28.mp4', name: 'video reel_28.mp4' },
+{ type: 'video', src: 'videos/reel_29.mp4', name: 'video reel_29.mp4' },
+{ type: 'video', src: 'videos/reel_30.mp4', name: 'video reel_30.mp4' },
+{ type: 'video', src: 'videos/reel_31.mp4', name: 'video reel_31.mp4' },
+{ type: 'video', src: 'videos/reel_32.mp4', name: 'video reel_32.mp4' },
+{ type: 'video', src: 'videos/reel_33.mp4', name: 'video reel_33.mp4' },
+{ type: 'video', src: 'videos/reel_34.mp4', name: 'video reel_34.mp4' },
+{ type: 'video', src: 'videos/reel_35.mp4', name: 'video reel_35.mp4' },
+{ type: 'video', src: 'videos/reel_36.mp4', name: 'video reel_36.mp4' },
+{ type: 'video', src: 'videos/reel_37.mp4', name: 'video reel_37.mp4' },
+{ type: 'video', src: 'videos/reel_38.mp4', name: 'video reel_38.mp4' },
+{ type: 'video', src: 'videos/reel_39.mp4', name: 'video reel_39.mp4' },
+{ type: 'video', src: 'videos/reel_40.mp4', name: 'video reel_40.mp4' },
+{ type: 'video', src: 'videos/reel_41.mp4', name: 'video reel_41.mp4' },
+{ type: 'video', src: 'videos/reel_42.mp4', name: 'video reel_42.mp4' },
+{ type: 'video', src: 'videos/reel_43.mp4', name: 'video reel_43.mp4' },
+{ type: 'video', src: 'videos/reel_44.mp4', name: 'video reel_44.mp4' },
+{ type: 'video', src: 'videos/reel_45.mp4', name: 'video reel_45.mp4' },
+{ type: 'video', src: 'videos/reel_46.mp4', name: 'video reel_46.mp4' },
+{ type: 'video', src: 'videos/reel_47.mp4', name: 'video reel_47.mp4' },
+{ type: 'video', src: 'videos/reel_48.mp4', name: 'video reel_48.mp4' },
+{ type: 'video', src: 'videos/reel_49.mp4', name: 'video reel_49.mp4' },
+{ type: 'video', src: 'videos/reel_50.mp4', name: 'video reel_50.mp4' },
+{ type: 'video', src: 'videos/reel_51.mp4', name: 'video reel_51.mp4' },
+{ type: 'video', src: 'videos/reel_52.mp4', name: 'video reel_52.mp4' },
+{ type: 'video', src: 'videos/reel_53.mp4', name: 'video reel_53.mp4' },
+{ type: 'video', src: 'videos/reel_54.mp4', name: 'video reel_54.mp4' },
+{ type: 'video', src: 'videos/reel_55.mp4', name: 'video reel_55.mp4' },
+{ type: 'video', src: 'videos/reel_56.mp4', name: 'video reel_56.mp4' },
+{ type: 'video', src: 'videos/reel_57.mp4', name: 'video reel_57.mp4' },
+{ type: 'video', src: 'videos/reel_58.mp4', name: 'video reel_58.mp4' },
+{ type: 'video', src: 'videos/reel_59.mp4', name: 'video reel_59.mp4' },
+{ type: 'video', src: 'videos/reel_60.mp4', name: 'video reel_60.mp4' },
+{ type: 'video', src: 'videos/reel_61.mp4', name: 'video reel_61.mp4' },
+{ type: 'video', src: 'videos/reel_62.mp4', name: 'video reel_62.mp4' },
+{ type: 'video', src: 'videos/reel_63.mp4', name: 'video reel_63.mp4' },
+{ type: 'video', src: 'videos/reel_64.mp4', name: 'video reel_64.mp4' },
+{ type: 'video', src: 'videos/reel_65.mp4', name: 'video reel_65.mp4' },
+{ type: 'video', src: 'videos/reel_66.mp4', name: 'video reel_66.mp4' },
+{ type: 'video', src: 'videos/reel_67.mp4', name: 'video reel_67.mp4' },
+{ type: 'video', src: 'videos/reel_68.mp4', name: 'video reel_68.mp4' },
+{ type: 'video', src: 'videos/reel_69.mp4', name: 'video reel_69.mp4' },
+{ type: 'video', src: 'videos/reel_70.mp4', name: 'video reel_70.mp4' },
+{ type: 'video', src: 'videos/reel_71.mp4', name: 'video reel_71.mp4' },
+{ type: 'video', src: 'videos/reel_72.mp4', name: 'video reel_72.mp4' },
+{ type: 'video', src: 'videos/reel_73.mp4', name: 'video reel_73.mp4' },
+{ type: 'video', src: 'videos/reel_74.mp4', name: 'video reel_74.mp4' },
+{ type: 'video', src: 'videos/reel_75.mp4', name: 'video reel_75.mp4' },
+{ type: 'video', src: 'videos/reel_76.mp4', name: 'video reel_76.mp4' },
+{ type: 'video', src: 'videos/reel_77.mp4', name: 'video reel_77.mp4' },
+{ type: 'video', src: 'videos/reel_78.mp4', name: 'video reel_78.mp4' },
+{ type: 'video', src: 'videos/reel_79.mp4', name: 'video reel_79.mp4' },
+{ type: 'video', src: 'videos/reel_80.mp4', name: 'video reel_80.mp4' },
+{ type: 'video', src: 'videos/reel_81.mp4', name: 'video reel_81.mp4' },
+{ type: 'video', src: 'videos/reel_82.mp4', name: 'video reel_82.mp4' },
+{ type: 'video', src: 'videos/reel_83.mp4', name: 'video reel_83.mp4' },
+{ type: 'video', src: 'videos/reel_84.mp4', name: 'video reel_84.mp4' },
+{ type: 'video', src: 'videos/reel_85.mp4', name: 'video reel_85.mp4' },
+{ type: 'video', src: 'videos/reel_86.mp4', name: 'video reel_86.mp4' },
+{ type: 'video', src: 'videos/reel_87.mp4', name: 'video reel_87.mp4' },
+{ type: 'video', src: 'videos/reel_88.mp4', name: 'video reel_88.mp4' },
+{ type: 'video', src: 'videos/reel_89.mp4', name: 'video reel_89.mp4' },
+{ type: 'video', src: 'videos/reel_90.mp4', name: 'video reel_90.mp4' },
+{ type: 'video', src: 'videos/reel_91.mp4', name: 'video reel_91.mp4' },
+{ type: 'video', src: 'videos/reel_92.mp4', name: 'video reel_92.mp4' },
+{ type: 'video', src: 'videos/reel_93.mp4', name: 'video reel_93.mp4' },
+{ type: 'video', src: 'videos/reel_94.mp4', name: 'video reel_94.mp4' },
+{ type: 'video', src: 'videos/reel_95.mp4', name: 'video reel_95.mp4' },
+{ type: 'video', src: 'videos/reel_96.mp4', name: 'video reel_96.mp4' },
+{ type: 'video', src: 'videos/reel_97.mp4', name: 'video reel_97.mp4' },
+{ type: 'video', src: 'videos/reel_98.mp4', name: 'video reel_98.mp4' },
+{ type: 'video', src: 'videos/reel_99.mp4', name: 'video reel_99.mp4' },
+{ type: 'video', src: 'videos/reel_100.mp4', name: 'video reel_100.mp4' },
+{ type: 'video', src: 'videos/reel_101.mp4', name: 'video reel_101.mp4' },
+{ type: 'video', src: 'videos/reel_102.mp4', name: 'video reel_102.mp4' },
+{ type: 'video', src: 'videos/reel_103.mp4', name: 'video reel_103.mp4' },
+{ type: 'video', src: 'videos/reel_104.mp4', name: 'video reel_104.mp4' },
+{ type: 'video', src: 'videos/reel_105.mp4', name: 'video reel_105.mp4' },
+{ type: 'video', src: 'videos/reel_106.mp4', name: 'video reel_106.mp4' },
+{ type: 'video', src: 'videos/reel_107.mp4', name: 'video reel_107.mp4' },
+{ type: 'video', src: 'videos/reel_108.mp4', name: 'video reel_108.mp4' },
+{ type: 'video', src: 'videos/reel_109.mp4', name: 'video reel_109.mp4' },
+{ type: 'video', src: 'videos/reel_110.mp4', name: 'video reel_110.mp4' },
+{ type: 'video', src: 'videos/reel_111.mp4', name: 'video reel_111.mp4' },
+{ type: 'video', src: 'videos/reel_112.mp4', name: 'video reel_112.mp4' },
+{ type: 'video', src: 'videos/reel_113.mp4', name: 'video reel_113.mp4' },
+{ type: 'video', src: 'videos/reel_114.mp4', name: 'video reel_114.mp4' },
+{ type: 'video', src: 'videos/reel_115.mp4', name: 'video reel_115.mp4' },
+{ type: 'video', src: 'videos/reel_116.mp4', name: 'video reel_116.mp4' },
+{ type: 'video', src: 'videos/reel_117.mp4', name: 'video reel_117.mp4' },
+{ type: 'video', src: 'videos/reel_118.mp4', name: 'video reel_118.mp4' },
+{ type: 'video', src: 'videos/reel_119.mp4', name: 'video reel_119.mp4' },
+{ type: 'video', src: 'videos/reel_120.mp4', name: 'video reel_120.mp4' },
+{ type: 'video', src: 'videos/reel_121.mp4', name: 'video reel_121.mp4' },
+{ type: 'video', src: 'videos/reel_122.mp4', name: 'video reel_122.mp4' },
+{ type: 'video', src: 'videos/reel_123.mp4', name: 'video reel_123.mp4' },
+{ type: 'video', src: 'videos/reel_124.mp4', name: 'video reel_124.mp4' },
+{ type: 'video', src: 'videos/reel_125.mp4', name: 'video reel_125.mp4' },
+{ type: 'video', src: 'videos/reel_126.mp4', name: 'video reel_126.mp4' },
+{ type: 'video', src: 'videos/reel_127.mp4', name: 'video reel_127.mp4' },
+{ type: 'video', src: 'videos/reel_128.mp4', name: 'video reel_128.mp4' },
+{ type: 'video', src: 'videos/reel_129.mp4', name: 'video reel_129.mp4' },
+{ type: 'video', src: 'videos/reel_130.mp4', name: 'video reel_130.mp4' },
+{ type: 'video', src: 'videos/reel_131.mp4', name: 'video reel_131.mp4' },
+{ type: 'video', src: 'videos/reel_132.mp4', name: 'video reel_132.mp4' },
+{ type: 'video', src: 'videos/reel_133.mp4', name: 'video reel_133.mp4' },
+{ type: 'video', src: 'videos/reel_134.mp4', name: 'video reel_134.mp4' },
+{ type: 'video', src: 'videos/reel_135.mp4', name: 'video reel_135.mp4' },
+{ type: 'video', src: 'videos/reel_136.mp4', name: 'video reel_136.mp4' },
+{ type: 'video', src: 'videos/reel_137.mp4', name: 'video reel_137.mp4' },
+{ type: 'video', src: 'videos/reel_138.mp4', name: 'video reel_138.mp4' },
+{ type: 'video', src: 'videos/reel_139.mp4', name: 'video reel_139.mp4' },
+{ type: 'video', src: 'videos/reel_140.mp4', name: 'video reel_140.mp4' },
+{ type: 'video', src: 'videos/reel_141.mp4', name: 'video reel_141.mp4' },
+{ type: 'video', src: 'videos/reel_142.mp4', name: 'video reel_142.mp4' },
+{ type: 'video', src: 'videos/reel_143.mp4', name: 'video reel_143.mp4' },
+{ type: 'video', src: 'videos/reel_144.mp4', name: 'video reel_144.mp4' },
+{ type: 'video', src: 'videos/reel_145.mp4', name: 'video reel_145.mp4' },
+{ type: 'video', src: 'videos/reel_146.mp4', name: 'video reel_146.mp4' },
+{ type: 'video', src: 'videos/reel_147.mp4', name: 'video reel_147.mp4' },
+{ type: 'video', src: 'videos/reel_148.mp4', name: 'video reel_148.mp4' },
+{ type: 'video', src: 'videos/reel_149.mp4', name: 'video reel_149.mp4' },
+{ type: 'video', src: 'videos/reel_150.mp4', name: 'video reel_150.mp4' },
+{ type: 'video', src: 'videos/reel_151.mp4', name: 'video reel_151.mp4' },
+{ type: 'video', src: 'videos/reel_152.mp4', name: 'video reel_152.mp4' },
+{ type: 'video', src: 'videos/reel_153.mp4', name: 'video reel_153.mp4' },
+{ type: 'video', src: 'videos/reel_154.mp4', name: 'video reel_154.mp4' },
+{ type: 'video', src: 'videos/reel_155.mp4', name: 'video reel_155.mp4' },
+{ type: 'video', src: 'videos/reel_156.mp4', name: 'video reel_156.mp4' },
+{ type: 'video', src: 'videos/reel_157.mp4', name: 'video reel_157.mp4' },
+{ type: 'video', src: 'videos/reel_158.mp4', name: 'video reel_158.mp4' },
+{ type: 'video', src: 'videos/reel_159.mp4', name: 'video reel_159.mp4' },
+{ type: 'video', src: 'videos/reel_160.mp4', name: 'video reel_160.mp4' },
+{ type: 'video', src: 'videos/reel_161.mp4', name: 'video reel_161.mp4' },
+{ type: 'video', src: 'videos/reel_162.mp4', name: 'video reel_162.mp4' },
+{ type: 'video', src: 'videos/reel_163.mp4', name: 'video reel_163.mp4' },
+{ type: 'video', src: 'videos/reel_164.mp4', name: 'video reel_164.mp4' },
+{ type: 'video', src: 'videos/reel_165.mp4', name: 'video reel_165.mp4' },
+{ type: 'video', src: 'videos/reel_166.mp4', name: 'video reel_166.mp4' },
+{ type: 'video', src: 'videos/reel_167.mp4', name: 'video reel_167.mp4' },
+{ type: 'video', src: 'videos/reel_168.mp4', name: 'video reel_168.mp4' },
+{ type: 'video', src: 'videos/reel_169.mp4', name: 'video reel_169.mp4' },
+{ type: 'video', src: 'videos/reel_170.mp4', name: 'video reel_170.mp4' },
+{ type: 'video', src: 'videos/reel_171.mp4', name: 'video reel_171.mp4' },
+{ type: 'video', src: 'videos/reel_172.mp4', name: 'video reel_172.mp4' },
+{ type: 'video', src: 'videos/reel_173.mp4', name: 'video reel_173.mp4' },
+{ type: 'video', src: 'videos/reel_174.mp4', name: 'video reel_174.mp4' },
+{ type: 'video', src: 'videos/reel_175.mp4', name: 'video reel_175.mp4' },
+{ type: 'video', src: 'videos/reel_176.mp4', name: 'video reel_176.mp4' },
+{ type: 'video', src: 'videos/reel_177.mp4', name: 'video reel_177.mp4' },
+{ type: 'video', src: 'videos/reel_178.mp4', name: 'video reel_178.mp4' },
+{ type: 'video', src: 'videos/reel_179.mp4', name: 'video reel_179.mp4' },
+{ type: 'video', src: 'videos/reel_180.mp4', name: 'video reel_180.mp4' },
+{ type: 'video', src: 'videos/reel_181.mp4', name: 'video reel_181.mp4' },
+{ type: 'video', src: 'videos/reel_182.mp4', name: 'video reel_182.mp4' },
+{ type: 'video', src: 'videos/reel_183.mp4', name: 'video reel_183.mp4' },
+{ type: 'video', src: 'videos/reel_184.mp4', name: 'video reel_184.mp4' },
+{ type: 'video', src: 'videos/reel_185.mp4', name: 'video reel_185.mp4' },
+{ type: 'video', src: 'videos/reel_186.mp4', name: 'video reel_186.mp4' },
+{ type: 'video', src: 'videos/reel_187.mp4', name: 'video reel_187.mp4' },
+{ type: 'video', src: 'videos/reel_188.mp4', name: 'video reel_188.mp4' },
+{ type: 'video', src: 'videos/reel_189.mp4', name: 'video reel_189.mp4' },
+{ type: 'video', src: 'videos/reel_190.mp4', name: 'video reel_190.mp4' },
+{ type: 'video', src: 'videos/reel_191.mp4', name: 'video reel_191.mp4' },
+{ type: 'video', src: 'videos/reel_192.mp4', name: 'video reel_192.mp4' },
+{ type: 'video', src: 'videos/reel_193.mp4', name: 'video reel_193.mp4' },
+{ type: 'video', src: 'videos/reel_194.mp4', name: 'video reel_194.mp4' },
+{ type: 'video', src: 'videos/reel_195.mp4', name: 'video reel_195.mp4' },
+{ type: 'video', src: 'videos/reel_196.mp4', name: 'video reel_196.mp4' },
+{ type: 'video', src: 'videos/reel_197.mp4', name: 'video reel_197.mp4' },
+{ type: 'video', src: 'videos/reel_198.mp4', name: 'video reel_198.mp4' },
+{ type: 'video', src: 'videos/reel_199.mp4', name: 'video reel_199.mp4' },
+{ type: 'video', src: 'videos/reel_200.mp4', name: 'video reel_200.mp4' },
+{ type: 'video', src: 'videos/reel_201.mp4', name: 'video reel_201.mp4' },
+{ type: 'video', src: 'videos/reel_202.mp4', name: 'video reel_202.mp4' },
+{ type: 'video', src: 'videos/reel_203.mp4', name: 'video reel_203.mp4' },
+{ type: 'video', src: 'videos/reel_204.mp4', name: 'video reel_204.mp4' },
+{ type: 'video', src: 'videos/reel_205.mp4', name: 'video reel_205.mp4' },
+{ type: 'video', src: 'videos/reel_206.mp4', name: 'video reel_206.mp4' },
+{ type: 'video', src: 'videos/reel_207.mp4', name: 'video reel_207.mp4' },
+{ type: 'video', src: 'videos/reel_208.mp4', name: 'video reel_208.mp4' },
+{ type: 'video', src: 'videos/reel_209.mp4', name: 'video reel_209.mp4' },
+{ type: 'video', src: 'videos/reel_210.mp4', name: 'video reel_210.mp4' },
+{ type: 'video', src: 'videos/reel_211.mp4', name: 'video reel_211.mp4' },
+{ type: 'video', src: 'videos/reel_212.mp4', name: 'video reel_212.mp4' },
+{ type: 'video', src: 'videos/reel_213.mp4', name: 'video reel_213.mp4' },
+{ type: 'video', src: 'videos/reel_214.mp4', name: 'video reel_214.mp4' },
+{ type: 'video', src: 'videos/reel_215.mp4', name: 'video reel_215.mp4' },
+{ type: 'video', src: 'videos/reel_216.mp4', name: 'video reel_216.mp4' },
+{ type: 'video', src: 'videos/reel_217.mp4', name: 'video reel_217.mp4' },
+{ type: 'video', src: 'videos/reel_218.mp4', name: 'video reel_218.mp4' },
+{ type: 'video', src: 'videos/reel_219.mp4', name: 'video reel_219.mp4' },
+{ type: 'video', src: 'videos/reel_220.mp4', name: 'video reel_220.mp4' },
+{ type: 'video', src: 'videos/reel_221.mp4', name: 'video reel_221.mp4' },
+{ type: 'video', src: 'videos/reel_222.mp4', name: 'video reel_222.mp4' },
+{ type: 'video', src: 'videos/reel_223.mp4', name: 'video reel_223.mp4' },
+{ type: 'video', src: 'videos/reel_224.mp4', name: 'video reel_224.mp4' },
+{ type: 'video', src: 'videos/reel_225.mp4', name: 'video reel_225.mp4' },
+{ type: 'video', src: 'videos/reel_226.mp4', name: 'video reel_226.mp4' },
+{ type: 'video', src: 'videos/reel_227.mp4', name: 'video reel_227.mp4' },
+{ type: 'video', src: 'videos/reel_228.mp4', name: 'video reel_228.mp4' },
+{ type: 'video', src: 'videos/reel_229.mp4', name: 'video reel_229.mp4' },
+{ type: 'video', src: 'videos/reel_230.mp4', name: 'video reel_230.mp4' },
+{ type: 'video', src: 'videos/reel_231.mp4', name: 'video reel_231.mp4' },
+{ type: 'video', src: 'videos/reel_232.mp4', name: 'video reel_232.mp4' },
+{ type: 'video', src: 'videos/reel_233.mp4', name: 'video reel_233.mp4' },
+{ type: 'video', src: 'videos/reel_234.mp4', name: 'video reel_234.mp4' },
+{ type: 'video', src: 'videos/reel_235.mp4', name: 'video reel_235.mp4' },
+{ type: 'video', src: 'videos/reel_236.mp4', name: 'video reel_236.mp4' },
+{ type: 'video', src: 'videos/reel_237.mp4', name: 'video reel_237.mp4' },
+{ type: 'video', src: 'videos/reel_238.mp4', name: 'video reel_238.mp4' },
+{ type: 'video', src: 'videos/reel_239.mp4', name: 'video reel_239.mp4' },
+{ type: 'video', src: 'videos/reel_240.mp4', name: 'video reel_240.mp4' },
+{ type: 'video', src: 'videos/reel_241.mp4', name: 'video reel_241.mp4' },
+{ type: 'video', src: 'videos/reel_242.mp4', name: 'video reel_242.mp4' },
+{ type: 'video', src: 'videos/reel_243.mp4', name: 'video reel_243.mp4' },
+{ type: 'video', src: 'videos/reel_244.mp4', name: 'video reel_244.mp4' },
+{ type: 'video', src: 'videos/reel_245.mp4', name: 'video reel_245.mp4' },
+{ type: 'video', src: 'videos/reel_246.mp4', name: 'video reel_246.mp4' },
+{ type: 'video', src: 'videos/reel_247.mp4', name: 'video reel_247.mp4' },
+{ type: 'video', src: 'videos/reel_248.mp4', name: 'video reel_248.mp4' },
+{ type: 'video', src: 'videos/reel_249.mp4', name: 'video reel_249.mp4' },
+{ type: 'video', src: 'videos/reel_250.mp4', name: 'video reel_250.mp4' },
+{ type: 'video', src: 'videos/reel_251.mp4', name: 'video reel_251.mp4' },
+{ type: 'video', src: 'videos/reel_252.mp4', name: 'video reel_252.mp4' },
+{ type: 'video', src: 'videos/reel_253.mp4', name: 'video reel_253.mp4' },
+{ type: 'video', src: 'videos/reel_254.mp4', name: 'video reel_254.mp4' },
+{ type: 'video', src: 'videos/reel_255.mp4', name: 'video reel_255.mp4' },
+{ type: 'video', src: 'videos/reel_256.mp4', name: 'video reel_256.mp4' },
+{ type: 'video', src: 'videos/reel_257.mp4', name: 'video reel_257.mp4' },
+{ type: 'video', src: 'videos/reel_258.mp4', name: 'video reel_258.mp4' },
+{ type: 'video', src: 'videos/reel_259.mp4', name: 'video reel_259.mp4' },
+{ type: 'video', src: 'videos/reel_260.mp4', name: 'video reel_260.mp4' },
+{ type: 'video', src: 'videos/reel_261.mp4', name: 'video reel_261.mp4' },
+{ type: 'video', src: 'videos/reel_262.mp4', name: 'video reel_262.mp4' },
+{ type: 'video', src: 'videos/reel_263.mp4', name: 'video reel_263.mp4' },
+{ type: 'video', src: 'videos/reel_264.mp4', name: 'video reel_264.mp4' },
+{ type: 'video', src: 'videos/reel_265.mp4', name: 'video reel_265.mp4' },
+{ type: 'video', src: 'videos/reel_266.mp4', name: 'video reel_266.mp4' },
+{ type: 'video', src: 'videos/reel_267.mp4', name: 'video reel_267.mp4' },
+{ type: 'video', src: 'videos/reel_268.mp4', name: 'video reel_268.mp4' },
+{ type: 'video', src: 'videos/reel_269.mp4', name: 'video reel_269.mp4' },
+{ type: 'video', src: 'videos/reel_270.mp4', name: 'video reel_270.mp4' },
+{ type: 'video', src: 'videos/reel_271.mp4', name: 'video reel_271.mp4' },
+{ type: 'video', src: 'videos/reel_272.mp4', name: 'video reel_272.mp4' },
+{ type: 'video', src: 'videos/reel_273.mp4', name: 'video reel_273.mp4' },
+{ type: 'video', src: 'videos/reel_274.mp4', name: 'video reel_274.mp4' },
+{ type: 'video', src: 'videos/reel_275.mp4', name: 'video reel_275.mp4' },
+{ type: 'video', src: 'videos/reel_276.mp4', name: 'video reel_276.mp4' },
+{ type: 'video', src: 'videos/reel_277.mp4', name: 'video reel_277.mp4' },
+{ type: 'video', src: 'videos/reel_278.mp4', name: 'video reel_278.mp4' },
+{ type: 'video', src: 'videos/reel_279.mp4', name: 'video reel_279.mp4' },
+{ type: 'video', src: 'videos/reel_280.mp4', name: 'video reel_280.mp4' },
+{ type: 'video', src: 'videos/reel_281.mp4', name: 'video reel_281.mp4' },
+{ type: 'video', src: 'videos/reel_282.mp4', name: 'video reel_282.mp4' },
+{ type: 'video', src: 'videos/reel_283.mp4', name: 'video reel_283.mp4' },
+{ type: 'video', src: 'videos/reel_284.mp4', name: 'video reel_284.mp4' },
+{ type: 'video', src: 'videos/reel_285.mp4', name: 'video reel_285.mp4' },
+{ type: 'video', src: 'videos/reel_286.mp4', name: 'video reel_286.mp4' },
+{ type: 'video', src: 'videos/reel_287.mp4', name: 'video reel_287.mp4' },
+{ type: 'video', src: 'videos/reel_288.mp4', name: 'video reel_288.mp4' },
+{ type: 'video', src: 'videos/reel_289.mp4', name: 'video reel_289.mp4' },
+{ type: 'video', src: 'videos/reel_290.mp4', name: 'video reel_290.mp4' },
+{ type: 'video', src: 'videos/reel_291.mp4', name: 'video reel_291.mp4' },
+{ type: 'video', src: 'videos/reel_292.mp4', name: 'video reel_292.mp4' },
+{ type: 'video', src: 'videos/reel_293.mp4', name: 'video reel_293.mp4' },
+{ type: 'video', src: 'videos/reel_294.mp4', name: 'video reel_294.mp4' },
+{ type: 'video', src: 'videos/reel_295.mp4', name: 'video reel_295.mp4' },
+{ type: 'video', src: 'videos/reel_296.mp4', name: 'video reel_296.mp4' },
+{ type: 'video', src: 'videos/reel_297.mp4', name: 'video reel_297.mp4' },
+{ type: 'video', src: 'videos/reel_298.mp4', name: 'video reel_298.mp4' },
+{ type: 'video', src: 'videos/reel_299.mp4', name: 'video reel_299.mp4' },
+{ type: 'video', src: 'videos/reel_300.mp4', name: 'video reel_300.mp4' },
+{ type: 'video', src: 'videos/reel_301.mp4', name: 'video reel_301.mp4' },
+{ type: 'video', src: 'videos/reel_302.mp4', name: 'video reel_302.mp4' },
+{ type: 'video', src: 'videos/reel_303.mp4', name: 'video reel_303.mp4' },
+{ type: 'video', src: 'videos/reel_304.mp4', name: 'video reel_304.mp4' },
+{ type: 'video', src: 'videos/reel_305.mp4', name: 'video reel_305.mp4' },
+{ type: 'video', src: 'videos/reel_306.mp4', name: 'video reel_306.mp4' },
+{ type: 'video', src: 'videos/reel_307.mp4', name: 'video reel_307.mp4' },
+{ type: 'video', src: 'videos/reel_308.mp4', name: 'video reel_308.mp4' },
+{ type: 'video', src: 'videos/reel_309.mp4', name: 'video reel_309.mp4' },
+{ type: 'video', src: 'videos/reel_310.mp4', name: 'video reel_310.mp4' },
+{ type: 'video', src: 'videos/reel_311.mp4', name: 'video reel_311.mp4' },
+{ type: 'video', src: 'videos/reel_312.mp4', name: 'video reel_312.mp4' },
+{ type: 'video', src: 'videos/reel_313.mp4', name: 'video reel_313.mp4' },
+{ type: 'video', src: 'videos/reel_314.mp4', name: 'video reel_314.mp4' },
+{ type: 'video', src: 'videos/reel_315.mp4', name: 'video reel_315.mp4' },
+{ type: 'video', src: 'videos/reel_316.mp4', name: 'video reel_316.mp4' },
+{ type: 'video', src: 'videos/reel_317.mp4', name: 'video reel_317.mp4' },
+{ type: 'video', src: 'videos/reel_318.mp4', name: 'video reel_318.mp4' },
+{ type: 'video', src: 'videos/reel_319.mp4', name: 'video reel_319.mp4' },
+{ type: 'video', src: 'videos/reel_320.mp4', name: 'video reel_320.mp4' },
+{ type: 'video', src: 'videos/reel_321.mp4', name: 'video reel_321.mp4' },
+{ type: 'video', src: 'videos/reel_322.mp4', name: 'video reel_322.mp4' },
+{ type: 'video', src: 'videos/reel_323.mp4', name: 'video reel_323.mp4' },
+{ type: 'video', src: 'videos/reel_324.mp4', name: 'video reel_324.mp4' },
+{ type: 'video', src: 'videos/reel_325.mp4', name: 'video reel_325.mp4' },
+{ type: 'video', src: 'videos/reel_326.mp4', name: 'video reel_326.mp4' },
+{ type: 'video', src: 'videos/reel_327.mp4', name: 'video reel_327.mp4' },
+{ type: 'video', src: 'videos/reel_328.mp4', name: 'video reel_328.mp4' },
+{ type: 'video', src: 'videos/reel_329.mp4', name: 'video reel_329.mp4' },
+{ type: 'video', src: 'videos/reel_330.mp4', name: 'video reel_330.mp4' },
+{ type: 'video', src: 'videos/reel_331.mp4', name: 'video reel_331.mp4' },
+{ type: 'video', src: 'videos/reel_332.mp4', name: 'video reel_332.mp4' },
+{ type: 'video', src: 'videos/reel_333.mp4', name: 'video reel_333.mp4' },
+{ type: 'video', src: 'videos/reel_334.mp4', name: 'video reel_334.mp4' },
+{ type: 'video', src: 'videos/reel_335.mp4', name: 'video reel_335.mp4' },
+{ type: 'video', src: 'videos/reel_336.mp4', name: 'video reel_336.mp4' },
+{ type: 'video', src: 'videos/reel_337.mp4', name: 'video reel_337.mp4' },
+{ type: 'video', src: 'videos/reel_338.mp4', name: 'video reel_338.mp4' },
+{ type: 'video', src: 'videos/reel_339.mp4', name: 'video reel_339.mp4' },
+{ type: 'video', src: 'videos/reel_340.mp4', name: 'video reel_340.mp4' },
+{ type: 'video', src: 'videos/reel_341.mp4', name: 'video reel_341.mp4' },
+{ type: 'video', src: 'videos/reel_342.mp4', name: 'video reel_342.mp4' },
+{ type: 'video', src: 'videos/reel_343.mp4', name: 'video reel_343.mp4' },
+{ type: 'video', src: 'videos/reel_344.mp4', name: 'video reel_344.mp4' },
+{ type: 'video', src: 'videos/reel_345.mp4', name: 'video reel_345.mp4' },
+{ type: 'video', src: 'videos/reel_346.mp4', name: 'video reel_346.mp4' },
+{ type: 'video', src: 'videos/reel_347.mp4', name: 'video reel_347.mp4' },
+{ type: 'video', src: 'videos/reel_348.mp4', name: 'video reel_348.mp4' },
+{ type: 'video', src: 'videos/reel_349.mp4', name: 'video reel_349.mp4' },
+{ type: 'video', src: 'videos/reel_350.mp4', name: 'video reel_350.mp4' },
+{ type: 'video', src: 'videos/reel_351.mp4', name: 'video reel_351.mp4' },
+{ type: 'video', src: 'videos/reel_352.mp4', name: 'video reel_352.mp4' },
+{ type: 'video', src: 'videos/reel_353.mp4', name: 'video reel_353.mp4' },
+{ type: 'video', src: 'videos/reel_354.mp4', name: 'video reel_354.mp4' },
+{ type: 'video', src: 'videos/reel_355.mp4', name: 'video reel_355.mp4' },
+{ type: 'video', src: 'videos/reel_356.mp4', name: 'video reel_356.mp4' },
+{ type: 'video', src: 'videos/reel_357.mp4', name: 'video reel_357.mp4' },
+{ type: 'video', src: 'videos/reel_358.mp4', name: 'video reel_358.mp4' },
+{ type: 'video', src: 'videos/reel_359.mp4', name: 'video reel_359.mp4' },
+{ type: 'video', src: 'videos/reel_360.mp4', name: 'video reel_360.mp4' },
+{ type: 'video', src: 'videos/reel_361.mp4', name: 'video reel_361.mp4' },
+{ type: 'video', src: 'videos/reel_362.mp4', name: 'video reel_362.mp4' },
+{ type: 'video', src: 'videos/reel_363.mp4', name: 'video reel_363.mp4' },
+{ type: 'video', src: 'videos/reel_364.mp4', name: 'video reel_364.mp4' },
+{ type: 'video', src: 'videos/reel_365.mp4', name: 'video reel_365.mp4' },
+{ type: 'video', src: 'videos/reel_366.mp4', name: 'video reel_366.mp4' },
+{ type: 'video', src: 'videos/reel_367.mp4', name: 'video reel_367.mp4' },
+{ type: 'video', src: 'videos/reel_368.mp4', name: 'video reel_368.mp4' },
+{ type: 'video', src: 'videos/reel_369.mp4', name: 'video reel_369.mp4' },
+{ type: 'video', src: 'videos/reel_370.mp4', name: 'video reel_370.mp4' },
+{ type: 'video', src: 'videos/reel_371.mp4', name: 'video reel_371.mp4' },
+{ type: 'video', src: 'videos/reel_372.mp4', name: 'video reel_372.mp4' },
+{ type: 'video', src: 'videos/reel_373.mp4', name: 'video reel_373.mp4' },
+{ type: 'video', src: 'videos/reel_374.mp4', name: 'video reel_374.mp4' },
+{ type: 'video', src: 'videos/reel_375.mp4', name: 'video reel_375.mp4' },
+{ type: 'video', src: 'videos/reel_376.mp4', name: 'video reel_376.mp4' },
+{ type: 'video', src: 'videos/reel_377.mp4', name: 'video reel_377.mp4' },
+{ type: 'video', src: 'videos/reel_378.mp4', name: 'video reel_378.mp4' },
+{ type: 'video', src: 'videos/reel_379.mp4', name: 'video reel_379.mp4' },
+{ type: 'video', src: 'videos/reel_380.mp4', name: 'video reel_380.mp4' },
+{ type: 'video', src: 'videos/reel_381.mp4', name: 'video reel_381.mp4' },
+{ type: 'video', src: 'videos/reel_382.mp4', name: 'video reel_382.mp4' },
+{ type: 'video', src: 'videos/reel_383.mp4', name: 'video reel_383.mp4' },
+{ type: 'video', src: 'videos/reel_384.mp4', name: 'video reel_384.mp4' },
+{ type: 'video', src: 'videos/reel_385.mp4', name: 'video reel_385.mp4' },
+{ type: 'video', src: 'videos/reel_386.mp4', name: 'video reel_386.mp4' },
+{ type: 'video', src: 'videos/reel_387.mp4', name: 'video reel_387.mp4' },
+{ type: 'video', src: 'videos/reel_388.mp4', name: 'video reel_388.mp4' },
+{ type: 'video', src: 'videos/reel_389.mp4', name: 'video reel_389.mp4' },
+{ type: 'video', src: 'videos/reel_390.mp4', name: 'video reel_390.mp4' }
+];
+
+const mediaGrid = document.getElementById('mediaGrid');
+const modal = document.getElementById('myModal');
+const modalContent = document.getElementById('modalContent');
+const modalImg = document.getElementById('modalImage');
+const downloadButton = document.getElementById('downloadButton');
+const closeSpan = document.getElementsByClassName('close')[0];
+
+mediaFiles.forEach(file => {
+    if (file.type === 'divider') {
+        const hr = document.createElement('hr');
+        hr.style.border = '0';
+        hr.style.height = '15px';
+        hr.style.backgroundColor = '#000000bb';
+        hr.style.width = '100%';
+        hr.style.margin = '30px 0'; // Spazio sopra e sotto il divisore
+        hr.style.gridColumn = '1 / -1'; // Fa sì che l'elemento prenda tutta la larghezza
+        mediaGrid.appendChild(hr);
+        return; // Salta il resto del codice poiché non serve aggiungere altro per il divisore
+    }
+
+    if (file.type === 'sectionTitle') {
+        const sectionTitle = document.createElement('div');
+        sectionTitle.textContent = file.text;
+        sectionTitle.className = 'section-title'; // Usa la classe CSS definita
+        mediaGrid.appendChild(sectionTitle);
+        return; // Salta il resto del codice poiché non serve aggiungere altro per il titolo
+    }
+
+    const gridItem = document.createElement('div');
+    gridItem.classList.add('grid-item');
+
+    if (file.type === 'image') {
+        const img = document.createElement('img');
+        img.src = file.src;
+        img.alt = file.name;
+        img.onclick = function() {
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            downloadButton.href = this.src;
+
+            const windowWidth = window.innerWidth;
+            const windowHeight = window.innerHeight;
+            const maxModalWidth = windowWidth * 0.9;
+            const maxModalHeight = windowHeight * 0.9;
+
+            const imgAspectRatio = this.naturalWidth / this.naturalHeight;
+            const modalAspectRatio = maxModalWidth / maxModalHeight;
+
+            if (imgAspectRatio > modalAspectRatio) {
+                modalImg.style.width = `${maxModalWidth}px`;
+                modalImg.style.height = `${maxModalWidth / imgAspectRatio}px`;
+            } else {
+                modalImg.style.height = `${maxModalHeight}px`;
+                modalImg.style.width = `${maxModalHeight * imgAspectRatio}px`;
+            }
+
+            modalContent.style.display = "flex";
+            modalContent.style.justifyContent = "center";
+            modalContent.style.alignItems = "center";
+            modalContent.style.height = `${maxModalHeight}px`;
+            modalContent.style.marginTop = "5%";
+        };
+        gridItem.appendChild(img);
+    } else if (file.type === 'video') {
+        const video = document.createElement('video');
+        video.src = file.src;
+        video.controls = true;
+        gridItem.appendChild(video);
+
+        if (file.description) {
+            const description = document.createElement('p');
+            description.textContent = file.description;
+            description.style.color = 'white';
+            gridItem.appendChild(description);
+        }
+    }
+
+    const downloadLink = document.createElement('a');
+    downloadLink.href = file.src;
+    downloadLink.download = file.name;
+    downloadLink.classList.add('download-link');
+    downloadLink.textContent = 'Download';
+    gridItem.appendChild(downloadLink);
+
+    mediaGrid.appendChild(gridItem);
+});
+
+closeSpan.onclick = function() {
+    modal.style.display = "none";
+};
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+};
+
+document.addEventListener("DOMContentLoaded", function() {
+    const gridItems = document.querySelectorAll('.grid-item');
+
+    gridItems.forEach(item => {
+        const mediaElement = item.querySelector('img, video');
+        if (mediaElement) {
+            mediaElement.addEventListener('load', () => {
+                // Eventuale logica da aggiungere se necessario quando l'immagine/video è caricato
+            });
+        }
+    });
+});

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="ico/Login.png">
+    <title>Login - My Drive</title>
+    <style>
+        /* Stili esistenti */
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            background-image: url('sfondi/drive1.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            position: relative;
+        }
+
+        .login-container {
+            max-width: 400px;
+            width: 100%;
+            padding: 20px;
+            background: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            border-radius: 15px;
+        }
+
+        .back-arrow {
+            position: absolute;
+            top: 20px;
+            left: 25px;
+            text-decoration: none;
+            color: #ffffff;
+            font-size: 40px;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 25%;
+            background: rgba(0, 0, 0, 0.275);
+            backdrop-filter: blur(6px); /* Sfocatura leggera */
+        }
+
+        .back-arrow:hover {
+            background: rgba(0, 0, 0, 0.5); /* Mantieni lo sfondo invariato al passaggio del mouse */
+            color: #d4d1d1;
+            backdrop-filter: blur(6px); /* Mantenere la sfocatura invariata */
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        input {
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            opacity: 0;
+            transform: scale(0.9);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        input.show {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        button {
+            padding: 10px;
+            border: none;
+            border-radius: 15px;
+            background: #007BFF;
+            color: white;
+            cursor: pointer;
+            transition: opacity 0.5s ease, transform 0.5s ease;
+            font-size: 16px; /* Aggiungi questa riga per aumentare la dimensione del testo */
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+
+        button:disabled {
+            background: #dcdcdc;
+            cursor: not-allowed; /* Cambia il cursore quando il bottone è disabilitato */
+        }
+
+        .fade-out {
+            opacity: 0;
+            transform: scale(0.9);
+        }
+
+        .attempts-error {
+            color: orange;
+            font-weight: bold;
+        }
+
+        .dots {
+            display: inline-block;
+            font-size: 20px;
+            font-weight: bold;
+            color: rgb(255, 0, 0);
+        }
+    </style>
+</head>
+<body>
+    <a href="https://www.amzooon.com" class="back-arrow">&#8592;</a>
+    <div class="login-container">
+        <h1>Login</h1>
+        <form id="verificationForm">
+            <!-- Fase 1: Solo il pulsante per inviare il codice di verifica -->
+            <button type="button" id="sendCodeBtn">Invia codice di verifica</button>
+
+            <!-- Fase 2: Campo di input per inserire il codice di verifica e pulsante per confermare -->
+            <input type="text" id="verificationCode" placeholder="Inserisci il codice di verifica" required style="display: none;">
+            <button type="submit" id="verifyBtn" style="display: none;">Accedi</button>
+        </form>
+        <p id="attemptsMessage" class="attempts-error" style="display: none;">
+            Troppi tentativi falliti: REINDIRIZZAMENTO
+            <span id="dots" class="dots">.</span>
+        </p>
+    </div>
+    <script src="login_Drive.js"></script>
+</body>
+</html>
